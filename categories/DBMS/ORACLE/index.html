@@ -6,20 +6,17 @@
     
 
     
-    <title>first-post | DevJH</title>
+    <title>Category: ORACLE | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
-    
-    <meta property="og:type" content="article">
-<meta property="og:title" content="first-post">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/09/09/first-post/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="DevJH">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/categories/DBMS/ORACLE/index.html">
 <meta property="og:site_name" content="DevJH">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-09T08:50:53.762Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first-post">
+<meta name="twitter:title" content="DevJH">
     
 
     
@@ -75,7 +72,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DBMS/">DBMS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DBMS/ORACLE/">ORACLE</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="https://about.me/junghoon">About</a>
@@ -134,120 +131,57 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">ORACLE</em>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-first-post" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/DBMS/">DBMS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/DBMS/ORACLE/">ORACLE</a>
+            </div>
+            <div class="date"><time datetime="2018-09-09T09:26:25.000Z" itemprop="datePublished">2018-09-09</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        first-post
+        <a href="/2018/09/09/dbms-oracle-tablespace-001/">테이블스페이스 용량 확인 쿼리</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2018/09/09/first-post/" class="article-date">
-            <time datetime="2018-09-09T08:50:53.000Z" itemprop="datePublished">2018-09-09</time>
-        </a>
-    </div>
-
-		
-
-                
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="https://lee-jung-hoon.github.io/2018/09/09/first-post/" data-id="cjlumcgm80000q4umm5xouzfv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다.
+예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다.
+123456789101112131415SELECT   SUBSTR(A.TABLESPACE_NAME,1,30) TABLESPACE,         
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
 
 
 
@@ -286,8 +220,6 @@
         </ul>
     </div>
     
-        
-    
     <div class="widgets-container">
         
             
@@ -303,9 +235,9 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/09/09/first-post/" class="title">first-post</a></p>
-                            <p class="item-date"><time datetime="2018-09-09T08:50:53.000Z" itemprop="datePublished">2018-09-09</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/DBMS/">DBMS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/DBMS/ORACLE/">ORACLE</a></p>
+                            <p class="item-title"><a href="/2018/09/09/dbms-oracle-tablespace-001/" class="title">테이블스페이스 용량 확인 쿼리</a></p>
+                            <p class="item-date"><time datetime="2018-09-09T09:26:25.000Z" itemprop="datePublished">2018-09-09</time></p>
                         </div>
                     </li>
                 
@@ -315,6 +247,13 @@
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/">DBMS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/ORACLE/">ORACLE</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
 
             
                 
@@ -328,9 +267,23 @@
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DBMS/">DBMS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ORACLE/">ORACLE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TABLESPACE/">TABLESPACE</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/DBMS/" style="font-size: 10px;">DBMS</a> <a href="/tags/ORACLE/" style="font-size: 10px;">ORACLE</a> <a href="/tags/TABLESPACE/" style="font-size: 10px;">TABLESPACE</a>
+        </div>
+    </div>
+
 
             
                 
@@ -383,13 +336,11 @@
     var disqus_shortname = 'devjh';
     
     
-    var disqus_url = 'https://lee-jung-hoon.github.io/2018/09/09/first-post/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
