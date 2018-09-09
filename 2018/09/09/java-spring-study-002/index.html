@@ -6,20 +6,23 @@
     
 
     
-    <title>Category: DBMS | DevJH</title>
+    <title>java-spring-study-002 | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+        <meta name="keywords" content="" />
+    
     <meta name="description" content="IT Blog">
 <meta name="keywords" content="IT Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DevJH">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/categories/DBMS/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java-spring-study-002">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/09/09/java-spring-study-002/index.html">
 <meta property="og:site_name" content="DevJH">
 <meta property="og:description" content="IT Blog">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-09-09T09:46:16.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DevJH">
+<meta name="twitter:title" content="java-spring-study-002">
 <meta name="twitter:description" content="IT Blog">
     
 
@@ -135,57 +138,120 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">DBMS</em>
+    uncategorized
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-java-spring-study-002" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/DBMS/">DBMS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/DBMS/ORACLE/">ORACLE</a>
-            </div>
-            <div class="date"><time datetime="2018-09-09T09:26:25.000Z" itemprop="datePublished">2018-09-09</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/09/09/dbms-oracle-tablespace-001/">테이블스페이스 용량 확인 쿼리</a>
+        java-spring-study-002
         </h1>
     
 
-        <p class="article-excerpt">
-            업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다.
-예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다.
-123456789101112131415SELECT   SUBSTR(A.TABLESPACE_NAME,1,30) TABLESPACE,         
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/09/09/java-spring-study-002/" class="article-date">
+            <time datetime="2018-09-09T09:46:16.000Z" itemprop="datePublished">2018-09-09</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://lee-jung-hoon.github.io/2018/09/09/java-spring-study-002/" data-id="cjluoc59k0001qcump5nzymtz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
 
@@ -223,6 +289,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/09/09/java-spring-study-001/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">java-spring-study-001</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -354,11 +433,13 @@
     var disqus_shortname = 'devjh';
     
     
+    var disqus_url = 'https://lee-jung-hoon.github.io/2018/09/09/java-spring-study-002/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
