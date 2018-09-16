@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="WAS,JEUS,WEBTOB,LICENSE" />
     
-    <meta name="description" content="IT Blog">
+    <meta name="description" content="해당 문서는 JEUS와 웹투비 라이센스 파일을 발급 받은 상태를 전제로 합니다.  JEUS 라이센스 적용 방법 JEUS 설치 경로로 이동합니다. ($JEUS_HOME/license) 기존 라이센스 파일을 백업처리 합니다. (cp license license.old) ftp를 이용하여 신규 라이센스 파일을 업로드합니다. jeusadmin 명령어를 이용하여">
 <meta name="keywords" content="WAS,JEUS,WEBTOB,LICENSE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JEUS8, WEBTOB5 라이센스 적용 방법">
 <meta property="og:url" content="https://lee-jung-hoon.github.io/2018/09/16/was-jeus-license-001/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="IT Blog">
+<meta property="og:description" content="해당 문서는 JEUS와 웹투비 라이센스 파일을 발급 받은 상태를 전제로 합니다.  JEUS 라이센스 적용 방법 JEUS 설치 경로로 이동합니다. ($JEUS_HOME/license) 기존 라이센스 파일을 백업처리 합니다. (cp license license.old) ftp를 이용하여 신규 라이센스 파일을 업로드합니다. jeusadmin 명령어를 이용하여">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-16T01:53:21.664Z">
+<meta property="og:updated_time" content="2018-09-16T04:30:21.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JEUS8, WEBTOB5 라이센스 적용 방법">
-<meta name="twitter:description" content="IT Blog">
+<meta name="twitter:description" content="해당 문서는 JEUS와 웹투비 라이센스 파일을 발급 받은 상태를 전제로 합니다.  JEUS 라이센스 적용 방법 JEUS 설치 경로로 이동합니다. ($JEUS_HOME/license) 기존 라이센스 파일을 백업처리 합니다. (cp license license.old) ftp를 이용하여 신규 라이센스 파일을 업로드합니다. jeusadmin 명령어를 이용하여">
     
 
     
@@ -177,7 +177,56 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <ul>
+<li>해당 문서는 JEUS와 웹투비 라이센스 파일을 발급 받은 상태를 전제로 합니다.</li>
+</ul>
+<h2 id="JEUS-라이센스-적용-방법"><a href="#JEUS-라이센스-적용-방법" class="headerlink" title="JEUS 라이센스 적용 방법"></a>JEUS 라이센스 적용 방법</h2><ol>
+<li>JEUS 설치 경로로 이동합니다. ($JEUS_HOME/license)</li>
+<li>기존 라이센스 파일을 백업처리 합니다. (cp license license.old)</li>
+<li>ftp를 이용하여 신규 라이센스 파일을 업로드합니다.</li>
+<li>jeusadmin 명령어를 이용하여 라이센스 정보를 확인합니다. <ul>
+<li>jeusadmin -licensedue</li>
+<li>jeusadmin -licenseinfo</li>
+</ul>
+</li>
+<li>JEUS를 재기동합니다.<ul>
+<li>jdown -&gt; jboot</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>라이센스 파일은 .dat 확장자로 되어있을 경우 확장자를 제거하여야 합니다.</li>
+<li>ftp를 이용하여 업로드 하기 이전에 확장자를 제거할 한 후 업로드 할 경우 디렉토리로 인식하므로 업로드 후 확장자를 제거합니다. (cp license.dat license)</li>
+<li>Demo 라이센스의 경우 licensedue 명령어 입력 시, ‘ㅇㅇ Days Left’라는 유효기간에 대한 코멘트가 나타나며, 정식 라이센스의 경우 ‘unlimited’ 코멘트가 나타납니다.</li>
+<li>Demo 라이센스의 경우 licenseinfo 명령어 입력 시, Edition 부분에 ‘Demo License’ 문구가 나타나며 CPU가 ‘unlimited’라 출력됩니다. 정식 라이센스의 경우 ‘Demo’ 문구가 없으며 신청한 CPU 코어수와 HOST NAME이 나타납니다.</li>
+<li>JEUS 재기동 이전에 반드시 정식 라이센스의 CPU 코어 수, HOST NAME이 실제와 일치하는지 확인합니다.</li>
+<li>manager server를 shutdown 상태로 전환하고<br>nodemanager down -&gt; das down -&gt; das boot -&gt; nodemanager boot 순으로 진행합니다.</li>
+</ul>
+<h2 id="WEBTOB-라이센스-적용-방법"><a href="#WEBTOB-라이센스-적용-방법" class="headerlink" title="WEBTOB 라이센스 적용 방법"></a>WEBTOB 라이센스 적용 방법</h2><ol>
+<li>WEBTOB 설치 경로로 이동합니다. ($WEBTOB_HOME/license)</li>
+<li>기존 라이센스 파일을 백업처리 합니다. (cp license.dat license.dat.old)</li>
+<li>ftp를 이용하여 신규 라이센스 파일을 업로드합니다.</li>
+<li>wsconfig 파일을 컴파일 합니다.($WEBTOB_HOME/config 경로에서 ‘wscfl -i http.m’)</li>
+<li>wsadmin 명령어를 이용하여 라이센스 정보를 확인합니다. <ul>
+<li>wsadmin -i [라이센스 파일명]</li>
+</ul>
+</li>
+<li>WEBTOB를 재기동합니다.<ul>
+<li>wsdown -&gt; wsboot</li>
+</ul>
+</li>
+<li>wsadmin 명령어를 이용하여 적용된 라이센스 정보를 확인합니다. <ul>
+<li>wsadmin 입력 후 wi 재 입력</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>JEUS와 달리 .dat 확장자 그대로 적용합니다.</li>
+<li>wsadmin -i [라이센스 파일명] 입력 시, License Type이 ‘DEMO’로 출력될 경우 데모 라이센스이며 정식 라이센스인 경우 ‘REAL’이 출력됩니다.</li>
+<li>WEBTOB 재기동 이전에 반드시 정식 라이센스의 CPU 코어 수, HOST NAME이 실제와 일치하는지 확인합니다.</li>
+<li>wsadmin 입력 후 wi 재 입력 시, Demo 라이센스의 경우 ‘DEMO’라 출력되며 정식 라이센스인 경우 ‘REAL’이 출력됩니다.</li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
