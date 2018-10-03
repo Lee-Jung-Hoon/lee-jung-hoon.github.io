@@ -6,24 +6,21 @@
     
 
     
-    <title>서비스 로케이터란? | DevJH</title>
+    <title>Archive: 2018/10 | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="JAVA,DeginePattern,ServiceLocator" />
-    
-    <meta name="description" content="스프링을 공부하던 중 의존 해결을 위한 방법으로 서비스 로케이터와 DI가 있다고 배웠다. 하지만 서비스 로케이터를 제대로 설명하는 경우는 별로 없는듯 하다. 많은 부분에서 알지는 못하지만 이해한 곳까지는 적어보려 한다. 서비스 로케이터(Service Locator)는 마틴 파울러에 의해 유명해진 디자인 패턴이다. JNDI를 생각하면 빠르게 이해할 수 있을">
-<meta name="keywords" content="JAVA,DeginePattern,ServiceLocator">
-<meta property="og:type" content="article">
-<meta property="og:title" content="서비스 로케이터란?">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/09/16/programming-java-servicelocator-002/index.html">
+    <meta name="description" content="IT Blog">
+<meta name="keywords" content="IT Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DevJH">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/archives/2018/10/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="스프링을 공부하던 중 의존 해결을 위한 방법으로 서비스 로케이터와 DI가 있다고 배웠다. 하지만 서비스 로케이터를 제대로 설명하는 경우는 별로 없는듯 하다. 많은 부분에서 알지는 못하지만 이해한 곳까지는 적어보려 한다. 서비스 로케이터(Service Locator)는 마틴 파울러에 의해 유명해진 디자인 패턴이다. JNDI를 생각하면 빠르게 이해할 수 있을">
+<meta property="og:description" content="IT Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-16T07:09:58.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="서비스 로케이터란?">
-<meta name="twitter:description" content="스프링을 공부하던 중 의존 해결을 위한 방법으로 서비스 로케이터와 DI가 있다고 배웠다. 하지만 서비스 로케이터를 제대로 설명하는 경우는 별로 없는듯 하다. 많은 부분에서 알지는 못하지만 이해한 곳까지는 적어보려 한다. 서비스 로케이터(Service Locator)는 마틴 파울러에 의해 유명해진 디자인 패턴이다. JNDI를 생각하면 빠르게 이해할 수 있을">
+<meta name="twitter:title" content="DevJH">
+<meta name="twitter:description" content="IT Blog">
     
 
     
@@ -138,138 +135,85 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/PROGRAMMING/JAVA/">JAVA</a>
+    <i class="icon fa fa-archive"></i>Archive: 2018/10
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-programming-java-servicelocator-002" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a>
+            </div>
+            <div class="date"><time datetime="2018-10-03T14:56:37.000Z" itemprop="datePublished">2018-10-03</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        서비스 로케이터란?
+        <a href="/2018/10/03/programming-spring-study-004/">프로퍼티(Property)란?</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2018/09/16/programming-java-servicelocator-002/" class="article-date">
-            <time datetime="2018-09-16T06:22:44.000Z" itemprop="datePublished">2018-09-16</time>
-        </a>
-    </div>
-
-		
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/DeginePattern/">DeginePattern</a>, <a class="tag-link" href="/tags/JAVA/">JAVA</a>, <a class="tag-link" href="/tags/ServiceLocator/">ServiceLocator</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>스프링을 공부하던 중 의존 해결을 위한 방법으로 서비스 로케이터와 DI가 있다고 배웠다.</p>
-<p>하지만 서비스 로케이터를 제대로 설명하는 경우는 별로 없는듯 하다.</p>
-<p>많은 부분에서 알지는 못하지만 이해한 곳까지는 적어보려 한다.</p>
-<p>서비스 로케이터(Service Locator)는 마틴 파울러에 의해 유명해진 디자인 패턴이다.</p>
-<p>JNDI를 생각하면 빠르게 이해할 수 있을 듯 하다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServiceLocator</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> InitialContext ic;</span><br><span class="line">	<span class="keyword">private</span> Map cache;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> ServiceLocator me;</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		me = <span class="keyword">new</span> ServiceLocator();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">SerivceLocator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		cache = Collections.synchronizedMap(<span class="keyword">new</span> HashMap());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> InitialContext <span class="title">getInitialContext</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>( ic == <span class="keyword">null</span>) &#123;</span><br><span class="line">				ic = <span class="keyword">new</span> InitialContext();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="keyword">throw</span> e;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ic;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ServiceLocator <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> me;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> EJBLocalHome <span class="title">getLocalHome</span><span class="params">(String jndiHomeName)</span> </span></span><br><span class="line"><span class="function">		<span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		EJBLocalHome home = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (cache.containsKey(jndiHomeName))</span><br><span class="line">			&#123;</span><br><span class="line">				home = (EJBLocalHome)cache.get(jndiHomeName);</span><br><span class="line">			&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">				home = (EJBLocalHome)getInitialContext().lookup(jndiHomeName);</span><br><span class="line">				cache.put(jndiHomeName, home);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (NamingException ne) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> Exception(ne.getMessage());</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> Exception(e.getMessage());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> home;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>서비스 로케이터 패턴은 위의 소스와 같이 cache에 담아두고 객체가 필요할 경우<br>메모리에서 바로바로 찾아서 제공하는 구조를 가진다.</p>
-<p>cache에서 키를 찾아 존재하는 경우, 반환하고 없는 경우 cache에 담아주는 형태를 가진다.</p>
-<p><strong>인용</strong> <a href="https://code.i-harness.com/ko-kr/q/17c515" target="_blank" rel="noopener">https://code.i-harness.com/ko-kr/q/17c515</a><br>Dependency Injection과 Service Locator의 차이점은 무엇입니까? 두 패턴 모두 종속성 반전 원리를 구현하는 데 적합합니다. Service Locator 패턴은 공용 인터페이스를 변경하지 않고 전체 디자인을 느슨하게 만들기 때문에 기존 코드베이스에서 사용하기가 더 쉽습니다. 이와 동일한 이유로 Service Locator 패턴을 기반으로하는 코드는 Dependency Injection을 기반으로하는 동일한 코드보다 읽기 쉽지 않습니다.</p>
-<p>Dependency Injection 패턴은 클래스 (또는 메소드)가 가질 종속성 서명 이후에 명확하게 나타냅니다. 이러한 이유로 결과 코드는보다 깨끗하고 읽기 쉽습니다.</p>
-<ul>
-<li>읽어 볼만한 링크<br><a href="http://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/" target="_blank" rel="noopener">http://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/</a></li>
-</ul>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="https://lee-jung-hoon.github.io/2018/09/16/programming-java-servicelocator-002/" data-id="cjmtbo9jm0009wwumk3leianu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            프로퍼티(Property)란?프로퍼티를 알기 전에 자바빈을 알아야 한다.자바빈즈은 JavaBean 규약에 따라 작성된 자바 클래스이다.자바빈즈 규약은 재사용 가능한 객체를 빈(Bean)으로 명명하고 있다.
+자바빈 클래스 외부에서 필드에 접근할 경우 반드시 메소드를 통해 접근해야한다.여기서 프로퍼티는 객체와 관련하여 이름 붙여진 속성을 말하며 빈이 관리하는 
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a>
+            </div>
+            <div class="date"><time datetime="2018-10-02T15:00:00.000Z" itemprop="datePublished">2018-10-03</time></div>
+        </div>
+        
     
-    </section>
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/10/03/programming-spring-study-003/">스프링 DI(의존주입)-2</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            1. 스프링에서의 의존주입 방식
+생성자 방식
+
+기본적인 의존주입 방식은 ‘생성자 방식’이 있다.생성자를 통해 의존 객체를 주입 받아 필드에 할당하는 방식이다.123456789101112131415public class MemberRegisterService &#123;	private MemberDao memberDao;		// 의존 객체를 할당해줄 생성자 
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+
+    </div></section>
 
 
 
@@ -307,29 +251,6 @@
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2018/10/03/programming-spring-study-003/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            스프링 DI(의존주입)-2
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2018/09/16/was-jeus-license-001/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JEUS8, WEBTOB5 라이센스 적용 방법</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -479,13 +400,11 @@
     var disqus_shortname = 'devjh';
     
     
-    var disqus_url = 'https://lee-jung-hoon.github.io/2018/09/16/programming-java-servicelocator-002/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
