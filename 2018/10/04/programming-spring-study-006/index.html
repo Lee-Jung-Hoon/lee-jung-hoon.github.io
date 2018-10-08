@@ -6,24 +6,24 @@
     
 
     
-    <title>테이블스페이스 용량 확인 쿼리 | DevJH</title>
+    <title>스프링 DI(의존주입)-4 | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="DBMS,ORACLE,TABLESPACE" />
+        <meta name="keywords" content="SPRING,DI" />
     
-    <meta name="description" content="업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다. 예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다. 123456789101112131415SELECT   SUBSTR(A.TABLESPACE_NAME,1,30) TABLESPACE,">
-<meta name="keywords" content="DBMS,ORACLE,TABLESPACE">
+    <meta name="description" content="1.의존 자동 주입-2바로 앞 포스트에서 Autowired 어노테이션을 이용한 의존 객체 자동 주입을 알게 되었다.스프링은 Autowired 외에도 Resource 어노테이션을 이용한 자동 주입을 지원한다. Autowired가 타입을 이용하는 반면 Resource는 빈의 이름을 이용한다는 차이점이 있다. Autowired와 사용 방법에서 많은 차이는 없다.">
+<meta name="keywords" content="SPRING,DI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="테이블스페이스 용량 확인 쿼리">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/09/09/dbms-oracle-tablespace-001/index.html">
+<meta property="og:title" content="스프링 DI(의존주입)-4">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/10/04/programming-spring-study-006/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다. 예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다. 123456789101112131415SELECT   SUBSTR(A.TABLESPACE_NAME,1,30) TABLESPACE,">
+<meta property="og:description" content="1.의존 자동 주입-2바로 앞 포스트에서 Autowired 어노테이션을 이용한 의존 객체 자동 주입을 알게 되었다.스프링은 Autowired 외에도 Resource 어노테이션을 이용한 자동 주입을 지원한다. Autowired가 타입을 이용하는 반면 Resource는 빈의 이름을 이용한다는 차이점이 있다. Autowired와 사용 방법에서 많은 차이는 없다.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-09T09:49:51.331Z">
+<meta property="og:updated_time" content="2018-10-08T14:59:39.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="테이블스페이스 용량 확인 쿼리">
-<meta name="twitter:description" content="업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다. 예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다. 123456789101112131415SELECT   SUBSTR(A.TABLESPACE_NAME,1,30) TABLESPACE,">
+<meta name="twitter:title" content="스프링 DI(의존주입)-4">
+<meta name="twitter:description" content="1.의존 자동 주입-2바로 앞 포스트에서 Autowired 어노테이션을 이용한 의존 객체 자동 주입을 알게 되었다.스프링은 Autowired 외에도 Resource 어노테이션을 이용한 자동 주입을 지원한다. Autowired가 타입을 이용하는 반면 Resource는 빈의 이름을 이용한다는 차이점이 있다. Autowired와 사용 방법에서 많은 차이는 없다.">
     
 
     
@@ -138,19 +138,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/DBMS/">DBMS</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/DBMS/ORACLE/">ORACLE</a>
+    <a class="page-title-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-dbms-oracle-tablespace-001" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-programming-spring-study-006" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        테이블스페이스 용량 확인 쿼리
+        스프링 DI(의존주입)-4
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/09/09/dbms-oracle-tablespace-001/" class="article-date">
-            <time datetime="2018-09-09T09:26:25.000Z" itemprop="datePublished">2018-09-09</time>
+        <a href="/2018/10/04/programming-spring-study-006/" class="article-date">
+            <time datetime="2018-10-04T14:01:23.000Z" itemprop="datePublished">2018-10-04</time>
         </a>
     </div>
 
@@ -170,17 +170,44 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/DBMS/">DBMS</a>, <a class="tag-link" href="/tags/ORACLE/">ORACLE</a>, <a class="tag-link" href="/tags/TABLESPACE/">TABLESPACE</a>
+        <a class="tag-link" href="/tags/DI/">DI</a>, <a class="tag-link" href="/tags/SPRING/">SPRING</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>업무를 하다보면 계정의 테이블스페이스의 현재 상태를 체크해야할 일이 생깁니다.</p>
-<p>예를 들어 데이터를 이관해야하는 경우, AUTOEXTENSIBLE가 YES일지라도 테이블스페이스의 현재 상태는 체크해주는게 좋습니다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>   <span class="keyword">SUBSTR</span>(A.TABLESPACE_NAME,<span class="number">1</span>,<span class="number">30</span>) <span class="keyword">TABLESPACE</span>,</span><br><span class="line">         <span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.TOTAL1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>) <span class="string">"총 용량(MB)"</span>,</span><br><span class="line">         <span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.TOTAL1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>)-<span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.SUM1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>) <span class="string">"사용량(MB)"</span>,</span><br><span class="line">         <span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.SUM1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>) <span class="string">"잔여용량(MB)"</span>,</span><br><span class="line">         <span class="keyword">ROUND</span>((<span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.TOTAL1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>)-<span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.SUM1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>))/<span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(A.TOTAL1)/<span class="number">1024</span>/<span class="number">1024</span>,<span class="number">1</span>)*<span class="number">100</span>,<span class="number">2</span>) <span class="string">"사용률(%)"</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">         (<span class="keyword">SELECT</span>   TABLESPACE_NAME,<span class="number">0</span> TOTAL1,<span class="keyword">SUM</span>(<span class="keyword">BYTES</span>) SUM1,<span class="keyword">MAX</span>(<span class="keyword">BYTES</span>) MAXB,<span class="keyword">COUNT</span>(<span class="keyword">BYTES</span>) CNT</span><br><span class="line">          <span class="keyword">FROM</span>     DBA_FREE_SPACE</span><br><span class="line">          <span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME</span><br><span class="line">          <span class="keyword">UNION</span></span><br><span class="line">          <span class="keyword">SELECT</span>   TABLESPACE_NAME,<span class="keyword">SUM</span>(<span class="keyword">BYTES</span>) TOTAL1,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span></span><br><span class="line">          <span class="keyword">FROM</span>     DBA_DATA_FILES</span><br><span class="line">          <span class="keyword">GROUP</span> <span class="keyword">BY</span> TABLESPACE_NAME) A</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> A.TABLESPACE_NAME</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">TABLESPACE</span>;</span><br></pre></td></tr></table></figure>
-<p>해당 쿼리 실행 시 총 용량과 현재 사용량, 잔여용량, 사용률 등을 확인할 수 있습니다.</p>
+            <h1 id="1-의존-자동-주입-2"><a href="#1-의존-자동-주입-2" class="headerlink" title="1.의존 자동 주입-2"></a>1.의존 자동 주입-2</h1><p>바로 앞 포스트에서 Autowired 어노테이션을 이용한 의존 객체 자동 주입을 알게 되었다.<br>스프링은 Autowired 외에도 Resource 어노테이션을 이용한 자동 주입을 지원한다.</p>
+<p>Autowired가 타입을 이용하는 반면 Resource는 <strong>빈의 이름을 이용</strong>한다는 차이점이 있다.</p>
+<p>Autowired와 사용 방법에서 많은 차이는 없다.</p>
+<ol>
+<li>설정 XML 내에 &lt;<a href="context:annotation-config/" target="_blank" rel="noopener">context:annotation-config/</a>&gt; 추가</li>
+<li>의존 주입 대상에 @Resource 어노테이션 작성</li>
+</ol>
+<p>하지만 큰 차이점이 존재하는데<br>Autowired와 다르게 <strong>생성자에는 적용할 수 없다는 점</strong>이다.<br>그 외에 <strong>필드나 설정 메소드에는 동일하게 적용</strong>할 수 있다.</p>
+<ul>
+<li><p>필드 자동 주입</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> calss MemberRegisterService &#123;</span><br><span class="line">	<span class="meta">@Resource</span>(name=<span class="string">"memberDao"</span>)</span><br><span class="line">	<span class="keyword">private</span> MemberDao memberDao; <span class="comment">// 의존 주입</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MemberRegisterService</span><span class="params">(MemberDao memberDao)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.memberDao = memberDao;</span><br><span class="line">	&#125;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>설정 메소드 자동 주입</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> calss MemberPrinter &#123;</span><br><span class="line">	<span class="keyword">private</span> MemberPrinter printer;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Resource</span>(name=<span class="string">"memberPrint"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPrinter</span><span class="params">(MemberPrinter printer)</span> </span>&#123; <span class="comment">// 의존 주입</span></span><br><span class="line">		<span class="keyword">this</span>.printer = printer;</span><br><span class="line">	&#125;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>위와 같이 필드와 설정 메소드에 설정할 수 있다.</p>
+<p>Autowired와 동일하게 의존 객체를 자동 주입할 경우 <strong>constructor-arg나 property 태그를 사용하지 않아도 된다.</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:annotation-config</span>/&gt;</span> // Autowired 처리</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"memberDao"</span> <span class="attr">class</span>=<span class="string">"kr.co.jhdev.MemberDao"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span> // Bean 등록</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"memberPrinter"</span> <span class="attr">class</span>=<span class="string">"kr.co.jhdev.MemberPrinter"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span> // Bean 등록</span><br></pre></td></tr></table></figure>
+<p>설정 XML에 Bean을 등록하고 id 속성을 Resource 어노테이션의 name 속성과 매핑해준다.</p>
+<h2 id="2-Resource의-기본적인-특성"><a href="#2-Resource의-기본적인-특성" class="headerlink" title="2. Resource의 기본적인 특성"></a>2. Resource의 기본적인 특성</h2><p>Resource는 Autowired와 다르게 빈의 이름을 기준으로 주입한다고 설명했다.<br><br>만약 Resource 어노테이션의 name 속성을 설정하지 않는다면 어떻게 될까?<br></p>
+<p>답은 Autowired와 같이 <strong>동일한 유형을 찾아 주입</strong>한다.<br><strong>Autowired와 동작 순서가 반대</strong>인 셈이다.<br>Resource 또한 name 속성이 없고 동일 유형의 빈이 다수 존재한다면 Exception이 발생한다.</p>
+<h2 id="3-Resource의-동작-순서"><a href="#3-Resource의-동작-순서" class="headerlink" title="3. Resource의 동작 순서"></a>3. Resource의 동작 순서</h2><p>Autowired와 반대 순서로 동작하는 Resource 동작 순서를 정리한다.<br>스프링에서 Resource 어노테이션 추가 시, 동작하는 순서는 아래와 같다.</p>
+<ol>
+<li>name 속성 값과 동일한 빈 객체를 찾고 해당 객체를 사용한다.<br><br></li>
+<li>name 속성 값이 없을 경우, 동일 타입의 객체를 검색하고 1개일 경우, 해당 객체를 사용한다.<br><br></li>
+<li>name 속성 값이 없고 동일 타입을 갖는 빈 객체가 2개 이상일 경우, 이름이 같은 빈 객체를 찾는다.<br><br></li>
+<li>name 속성 값이 없고 동일 타입을 갖는 빈 객체가 2개 이상이면서 같은 이름을 가진 빈 객체가 없는 경우 @Qualifier(한정자) 값의 빈 객체를 찾는다.<br><br></li>
+<li>모두 해당하지 않으면 Exception이 발생한다.</li>
+</ol>
+<h2 id="4-자동-주입과-명시적-의존-주입-간의-관계"><a href="#4-자동-주입과-명시적-의존-주입-간의-관계" class="headerlink" title="4. 자동 주입과 명시적 의존 주입 간의 관계"></a>4. 자동 주입과 명시적 의존 주입 간의 관계</h2><p>자동 주입과 명시적 의존 주입(constructor-arg, property 태그)을 함께 사용할 수 있다.<br>이러한 경우 자동 주입보다 명시적 의존 주입을 우선한다.</p>
 
         </div>
         <footer class="article-footer">
@@ -188,7 +215,7 @@
 
 
 
-    <a data-url="https://lee-jung-hoon.github.io/2018/09/09/dbms-oracle-tablespace-001/" data-id="cjn0fjhnm00010oumefnci4tn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://lee-jung-hoon.github.io/2018/10/04/programming-spring-study-006/" data-id="cjn0fjhoi000k0oum1rmmkad0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -302,16 +329,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/09/09/programming-spring-study-001/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            java-spring-study-001
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/2018/10/03/programming-spring-study-005/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">스프링 DI(의존주입)-3</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -464,7 +487,7 @@
     var disqus_shortname = 'devjh';
     
     
-    var disqus_url = 'https://lee-jung-hoon.github.io/2018/09/09/dbms-oracle-tablespace-001/';
+    var disqus_url = 'https://lee-jung-hoon.github.io/2018/10/04/programming-spring-study-006/';
     
     (function() {
     var dsq = document.createElement('script');
