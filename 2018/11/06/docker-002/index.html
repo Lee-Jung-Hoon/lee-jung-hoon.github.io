@@ -12,18 +12,20 @@
     
         <meta name="keywords" content="DOCKER,설치" />
     
-    <meta name="description" content="IT Blog">
+    <meta name="description" content="앞서 도커란 무엇인가에 대해 살펴 보았습니다. 이번엔 도커를 설치해보고자 합니다. 현재 PC가 Mac(맥 OS)이므로 해당 환경에 맞춰 진행하도록 하겠습니다.Windows 환경에서의 설치 또한 추후 업로드 할 예정입니다. 1. 도커 홈페이지 접속 도커 홈페이지에 접속하여 https://www.docker.com/get-started [Get Started]">
 <meta name="keywords" content="DOCKER,설치">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac(맥 OS)에 도커 설치하기">
 <meta property="og:url" content="https://lee-jung-hoon.github.io/2018/11/06/docker-002/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="IT Blog">
+<meta property="og:description" content="앞서 도커란 무엇인가에 대해 살펴 보았습니다. 이번엔 도커를 설치해보고자 합니다. 현재 PC가 Mac(맥 OS)이므로 해당 환경에 맞춰 진행하도록 하겠습니다.Windows 환경에서의 설치 또한 추후 업로드 할 예정입니다. 1. 도커 홈페이지 접속 도커 홈페이지에 접속하여 https://www.docker.com/get-started [Get Started]">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-06T09:44:43.571Z">
+<meta property="og:image" content="https://lee-jung-hoon.github.io/image/docker/docker.png">
+<meta property="og:updated_time" content="2018-11-07T02:08:15.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac(맥 OS)에 도커 설치하기">
-<meta name="twitter:description" content="IT Blog">
+<meta name="twitter:description" content="앞서 도커란 무엇인가에 대해 살펴 보았습니다. 이번엔 도커를 설치해보고자 합니다. 현재 PC가 Mac(맥 OS)이므로 해당 환경에 맞춰 진행하도록 하겠습니다.Windows 환경에서의 설치 또한 추후 업로드 할 예정입니다. 1. 도커 홈페이지 접속 도커 홈페이지에 접속하여 https://www.docker.com/get-started [Get Started]">
+<meta name="twitter:image" content="https://lee-jung-hoon.github.io/image/docker/docker.png">
     
 
     
@@ -177,14 +179,23 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <p><img src="/image/docker/docker.png" alt="고래? 컨테이터? 도커"><br>앞서 <strong>도커란 무엇인가</strong>에 대해 살펴 보았습니다.</p>
+<p>이번엔 도커를 설치해보고자 합니다.</p>
+<p>현재 PC가 Mac(맥 OS)이므로 해당 환경에 맞춰 진행하도록 하겠습니다.<br>Windows 환경에서의 설치 또한 추후 업로드 할 예정입니다.</p>
+<h1 id="1-도커-홈페이지-접속"><a href="#1-도커-홈페이지-접속" class="headerlink" title="1. 도커 홈페이지 접속"></a>1. 도커 홈페이지 접속</h1><p><img src="/image/docker/docker_install_000.png" alt="도커 공식 홈페이지(https://www.docker.com)"></p>
+<p>도커 홈페이지에 접속하여 <a href="https://www.docker.com/get-started" target="_blank" rel="noopener">https://www.docker.com/get-started</a> [Get Started]를 선택하시면 운영체제별 설치 페이지가 나타납니다.</p>
+<p>과거엔 CentOS나 Ubuntu 등의 리눅스 운영체제에 <code>apt-get</code>, <code>yum</code>과 같은 패키지 다운로더를 통해서만 설치가 가능했는데<br>현재는 다양한 운영체제로 확장되었습니다.<br>(물론 Windows의 경우 가상머신 툴 등이 포함되어 다소 차이가 있습니다. <strong>추후 업로드 예정</strong>)</p>
+<h1 id="2-도커-설치-파일-다운로드-및-설치-진행"><a href="#2-도커-설치-파일-다운로드-및-설치-진행" class="headerlink" title="2. 도커 설치 파일 다운로드 및 설치 진행"></a>2. 도커 설치 파일 다운로드 및 설치 진행</h1><p><img src="/image/docker/docker_install_001.png" alt=""><br><img src="/image/docker/docker_install_002.png" alt=""><br>도커 홈페이지에서 <strong>Docker for Mac</strong>(도커 디스크 이미지)를 다운 받아 그대로 설치를 진행합니다.<br>별다른 어려운 부분은 없습니다.<br>GUI이기 때문에 단순 클릭 몇 번이면 설치가 완료됩니다.</p>
+<h1 id="3-설치-확인"><a href="#3-설치-확인" class="headerlink" title="3. 설치 확인"></a>3. 설치 확인</h1><p><img src="/image/docker/docker_install_004.png" alt="설치된 도커 버전 확인"><br>마지막으로 터미널에 접속하여 <code>docker --version</code>을 입력하여 설치된 도커의 버전을 확인합니다.<br>해당 명령어를 입력 했을 때, 버전이 출력된다면 일단 도커 엔진이 설치된 상태입니다.</p>
+<p><strong>다음 포스트에서는 도커의 기본적인 사용 명령어에 대해 알아보겠습니다.</strong></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/docker-002/" data-id="cjo5kcpcc000rb53qymi90pfg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/docker-002/" data-id="cjo6hwzya001zv33qqw670myi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

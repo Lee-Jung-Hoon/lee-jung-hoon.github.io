@@ -21,7 +21,7 @@
 <meta property="og:description" content="도커는 아주 새로운 개념의 기술은 아니다.  도커 이전에 리눅스 컨테이너(LXC)라는 기술이 존재했다. 리눅스 컨테이너는 리눅스 커널에 포함되어 있었던 기술로 cgroups와 namespace를 활용하여 cpu, 메모리, 디스크, 네트워크 등을 할당하고 프로세스, Users 등을 분리할 수 있었다. 하지만 리눅스 컨테이너는 프로세스 단위로 분리한 것 외엔">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://lee-jung-hoon.github.io/image/docker/docker.png">
-<meta property="og:updated_time" content="2018-11-06T09:59:30.136Z">
+<meta property="og:updated_time" content="2018-11-06T11:18:38.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="도커(Docker)란?">
 <meta name="twitter:description" content="도커는 아주 새로운 개념의 기술은 아니다.  도커 이전에 리눅스 컨테이너(LXC)라는 기술이 존재했다. 리눅스 컨테이너는 리눅스 커널에 포함되어 있었던 기술로 cgroups와 namespace를 활용하여 cpu, 메모리, 디스크, 네트워크 등을 할당하고 프로세스, Users 등을 분리할 수 있었다. 하지만 리눅스 컨테이너는 프로세스 단위로 분리한 것 외엔">
@@ -189,7 +189,7 @@
 <p><strong>가상 머신</strong>은 호스트 운영체제 내 하이퍼바이저(가상화 기술)로 게스트 운영체제를 설치하는 구조이다.<br>결국 게스트 운영체제 자체를 설치하기 때문에 의존 라이브러리와 커널등은 따라올 수 밖에 없게 된다.<br>그러다보면 호스트의 많은 리소스를 할당 및 차지 하게 된다.</p>
 <p>이에 반해 <strong>도커</strong>는 게스트 운영체제를 생성하는 것이 아닌 가상화 된 공간을 프로세스 단위로 생성한다.<br>가상 머신과 다르게 호스트와 커널을 공유하고 컨테이너에 필요한 라이브러리만 설치하게 되는 것이다.<br>필요한 부분만 묶어 <strong>이미지</strong>라는 단위로 배포하고 실행하므로 가상 머신에 비해 적은 리소스를 차지한다.</p>
 <h1 id="LXC-LinuX-Container-리눅스-컨테이너"><a href="#LXC-LinuX-Container-리눅스-컨테이너" class="headerlink" title="LXC(LinuX Container, 리눅스 컨테이너)"></a>LXC(LinuX Container, 리눅스 컨테이너)</h1><p>앞서 설명한 리눅스 컨테이너와 도커의 관계에 대해 궁금할 수 있다.<br>초창기 도커의 경우 리눅스 커널 단에 포함되어 있던 리눅스 컨테이너를 활용하였다.</p>
-<p>현재는 LibContainer(<a href="https://github.com/docker/libcontainer" target="_blank" rel="noopener">https://github.com/docker/libcontainer</a>) 개발 프로젝트로 LXC에 자유로워진 상태이다.<br>리눅스 컨테이너가 커널단이라면 립컨테이너는 유저랜드(Userland) 라이브러리이다.</p>
+<p>현재는 LibContainer(<a href="https://github.com/docker/libcontainer" target="_blank" rel="noopener">https://github.com/docker/libcontainer</a>) 개발 프로젝트를 진행하였고 리눅스 컨테이너로부터 자유로워진 상태이다.<br>리눅스 컨테이너가 커널단이라면 립컨테이너는 유저랜드(Userland) 라이브러리이다.</p>
 
         </div>
         <footer class="article-footer">
@@ -197,7 +197,7 @@
 
 
 
-    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/docker-001/" data-id="cjo5kcpcb000pb53qwlts84ze" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/docker-001/" data-id="cjo6hwzy9001vv33qf6mqtuk1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
