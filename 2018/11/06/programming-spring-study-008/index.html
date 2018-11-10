@@ -6,7 +6,7 @@
     
 
     
-    <title>AOP란 무엇일까? | DevJH</title>
+    <title>AOP란 무엇일까? - 01 | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -15,15 +15,15 @@
     <meta name="description" content="AOP란 무엇일까?AOP는 Aspect Oriented Programming의 약자로 ‘관점 지향 프로그래밍’관심사를 분리하여 객체의 모듈화를 높히는 프로그래밍 기법이라고 생각하면 쉽다. 좀 더 어려운 말로 풀어보자면 핵심 비즈니스 로직과 공통 기능을 분리하는 기법이다. OOP 구조를 돕는 보조적인 역할을 하는 셈이다. 실제 업무 중 AOP로 활용한다면 시">
 <meta name="keywords" content="SPRING,AOP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AOP란 무엇일까?">
+<meta property="og:title" content="AOP란 무엇일까? - 01">
 <meta property="og:url" content="https://lee-jung-hoon.github.io/2018/11/06/programming-spring-study-008/index.html">
 <meta property="og:site_name" content="DevJH">
 <meta property="og:description" content="AOP란 무엇일까?AOP는 Aspect Oriented Programming의 약자로 ‘관점 지향 프로그래밍’관심사를 분리하여 객체의 모듈화를 높히는 프로그래밍 기법이라고 생각하면 쉽다. 좀 더 어려운 말로 풀어보자면 핵심 비즈니스 로직과 공통 기능을 분리하는 기법이다. OOP 구조를 돕는 보조적인 역할을 하는 셈이다. 실제 업무 중 AOP로 활용한다면 시">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://lee-jung-hoon.github.io/image/programming/spring/007/spring_001.jpeg">
-<meta property="og:updated_time" content="2018-11-06T11:18:38.001Z">
+<meta property="og:updated_time" content="2018-11-09T12:34:51.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOP란 무엇일까?">
+<meta name="twitter:title" content="AOP란 무엇일까? - 01">
 <meta name="twitter:description" content="AOP란 무엇일까?AOP는 Aspect Oriented Programming의 약자로 ‘관점 지향 프로그래밍’관심사를 분리하여 객체의 모듈화를 높히는 프로그래밍 기법이라고 생각하면 쉽다. 좀 더 어려운 말로 풀어보자면 핵심 비즈니스 로직과 공통 기능을 분리하는 기법이다. OOP 구조를 돕는 보조적인 역할을 하는 셈이다. 실제 업무 중 AOP로 활용한다면 시">
 <meta name="twitter:image" content="https://lee-jung-hoon.github.io/image/programming/spring/007/spring_001.jpeg">
     
@@ -152,7 +152,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        AOP란 무엇일까?
+        AOP란 무엇일까? - 01
         </h1>
     
 
@@ -186,15 +186,25 @@
 <p>업무 중 있었던 에피소드를 하나 소개해볼까 한다.</p>
 <p><img src="/image/programming/spring/007/spring_001.jpeg" alt="데이터를 이행하게 되었다."></p>
 <p>위는 간단하 예시이지만 ASIS -&gt; TOBE로의 데이터 이행 작업을 해야했다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 게시글 이행 Class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsBoard</span> <span class="keyword">implements</span> <span class="title">TrnsBase</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">     * 게시글 이행 Main Method</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">long</span> sTime = System.currentTimeMillis();</span><br><span class="line">         startContent(); <span class="comment">// 게시글 내용 이행</span></span><br><span class="line">         <span class="keyword">long</span> eTime = System.currentTimeMillis();</span><br><span class="line">         System.out.println(<span class="string">"수행 시간 : "</span> + (eTime - sTime));</span><br><span class="line">     &#125;</span><br><span class="line">     ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 방문자 기록 이행 Class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsVisit</span> <span class="keyword">implements</span> <span class="title">TrnsBase</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">     * 방문자 기록 이행 Main Method</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">long</span> sTime = System.currentTimeMillis();</span><br><span class="line">         startContent(); <span class="comment">// 방문자 내용 이행</span></span><br><span class="line">         <span class="keyword">long</span> eTime = System.currentTimeMillis();</span><br><span class="line">         System.out.println(<span class="string">"수행 시간 : "</span> + (eTime - sTime));</span><br><span class="line">     &#125;</span><br><span class="line">     ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 게시글 이행 Class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsBoard</span> <span class="keyword">implements</span> <span class="title">TrnsBase</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 방문자 기록 이행 Class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsVisit</span> <span class="keyword">implements</span> <span class="title">TrnsBase</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>이와 같은 게시글, 방문자 기록 이행 클래스가 존재한다고 가정해보자.<br>이때 실제 이행 이전에 예상 시간 및 정확한 이행을 위해 시간 측정은 필수이다.</p>
 <p>하지만 해당 코드는 큰 문제점을 가지고 있다.<br>그것은 바로 중복되는 소스로 인해 유연한 로직을 구현할 수 없다는 점이다.</p>
 <p>만약 시간 측정 방식을 바꾸거나 해당 로그 표기 방법을 바꿔야한다면 프로젝트 내 해당 소스가 반영된 모든 메소드를 수정해야한다.</p>
 <p>바로 <strong>관심사의 분리</strong>에 실패한 코드인 것이다.</p>
 <p>이러한 구조를 조금 개선해볼 수 있을 것이다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 프록시(proxy) 클래스</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsProxy</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">     * 프록시 Main Method</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">long</span> sTime = System.currentTimeMillis();</span><br><span class="line">         startVisit(); <span class="comment">// 방문자 내용 이행</span></span><br><span class="line">         startContent(); <span class="comment">// 게시글 내용 이행</span></span><br><span class="line">         startAttach();  <span class="comment">// 첨부파일 이행</span></span><br><span class="line">         <span class="keyword">long</span> eTime = System.currentTimeMillis();</span><br><span class="line">         System.out.println(<span class="string">"수행 시간 : "</span> + (eTime - sTime));</span><br><span class="line">     &#125;</span><br><span class="line">     ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>[작성중]</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 프록시 객체</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrnsProxy</span> <span class="keyword">implements</span> <span class="title">TrnsBase</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> TrnsBase target;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 생성자 초기화 클래스</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TrnsProxy</span><span class="params">(TrnsBase target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">startContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> sTime = System.currentTimeMillis();</span><br><span class="line">        target.startContent(); <span class="comment">// 이행</span></span><br><span class="line">        <span class="keyword">long</span> eTime = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"수행 시간 : "</span> + (eTime - sTime));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>또 다른 클래스를 생성하여 게시글, 방문자 이행와 같이 ‘TrnsBase’라는 인터페이스를 상속받아 구현한다.<br>다른 점이라면 생성자를 통해 또다른 구현 클래스를 전달 받고 실행시간을 출력하는 동작과 핵심 로직을 동시에 수행한다는 점이다.</p>
+<p>이로써 핵심 기능은 다른 객체에서 수행하고 공통 기능만을 제공하게 되었다.<br>이러한 객체를 <strong>프록시 객체</strong>라 부르며 AOP의 핵심인 공통 기능과 핵심 기능을 분리할 수 있다.</p>
+<p>이렇게 핵심 기능과 공통 기능을 분리하여 삽입하는 방법은 크게 3가지가 존재한다.</p>
+<ul>
+<li>컴파일 전에 별도 컴파일러를 통해 핵심 기능 사이에 공통 기능을 삽입하여 최종 바이너리를 만드는 방식(AspectJ)</li>
+<li>클래스 로딩 시, 별도의 에이전트를 이용하여 JVM이 클래스를 로딩하는 시점에 해당 클래스의 바이너리를 수정하여 삽입하는 방식(AspctWerkz)</li>
+<li>런타임 시, 프록시 객체를 생성하여 핵심 로직을 구현한 객체에 접근하는 방식(Spring AOP)</li>
+</ul>
+<p>각 방법별로 장단점이 존재하겠지만 간단히 살펴본다면 컴파일 시 타겟 파일을 수정하거나 클래스 로딩 시 바이너리를 가로채 조작하는 방법은 프록시 객체를 별도로 생성할 필요가 없으며 적용할 수 있는 시점이 다양하므로 자유롭다는 장점을 가지고 있다.(프록시 방식은 객체가 생성된 이후)<br>하지만 바이너리 코드를 변경하기 위해선 클래스를 로드하는 JVM에 옵션 설정이 필요하며 별도의 에이전트가 필요하다는 단점이 존재한다.</p>
+<p>스프링에서는 프록시를 이용한 AOP방식을 지원한다.</p>
+<p>대부분의 기능은 프록시 방식으로 충분히 구현이 가능하며 이보다 더 깊은 기능을 필요로 할때 바이너리를 조작하는 방법을 사용하는 것이 좋다.</p>
 
         </div>
         <footer class="article-footer">
@@ -202,7 +212,7 @@
 
 
 
-    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/programming-spring-study-008/" data-id="cjo6hwzyc0023v33qcg4de1du" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://lee-jung-hoon.github.io/2018/11/06/programming-spring-study-008/" data-id="cjoazdcvc000ucw3qh6e9mcpj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -351,6 +361,24 @@
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a></p>
+                            <p class="item-title"><a href="/2018/11/09/programming-spring-study-009/" class="title">AOP란 무엇일까? - 02</a></p>
+                            <p class="item-date"><time datetime="2018-11-09T12:34:34.000Z" itemprop="datePublished">2018-11-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/기타/">기타</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/기타/DOCKER/">DOCKER</a></p>
+                            <p class="item-title"><a href="/2018/11/07/docker-003/" class="title">도커(Docker) 기본 사용법 및 몽고 DB 설치</a></p>
+                            <p class="item-date"><time datetime="2018-11-07T02:17:48.000Z" itemprop="datePublished">2018-11-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/기타/">기타</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/기타/DOCKER/">DOCKER</a></p>
                             <p class="item-title"><a href="/2018/11/06/docker-002/" class="title">Mac(맥 OS)에 도커 설치하기</a></p>
                             <p class="item-date"><time datetime="2018-11-06T08:35:35.000Z" itemprop="datePublished">2018-11-06</time></p>
@@ -370,26 +398,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a></p>
-                            <p class="item-title"><a href="/2018/11/06/programming-spring-study-008/" class="title">AOP란 무엇일까?</a></p>
+                            <p class="item-title"><a href="/2018/11/06/programming-spring-study-008/" class="title">AOP란 무엇일까? - 01</a></p>
                             <p class="item-date"><time datetime="2018-11-05T15:50:51.000Z" itemprop="datePublished">2018-11-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a></p>
-                            <p class="item-title"><a href="/2018/10/20/programming-spring-study-007/" class="title">스프링 자바를 이용한 주입 설정</a></p>
-                            <p class="item-date"><time datetime="2018-10-20T12:01:23.000Z" itemprop="datePublished">2018-10-20</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a></p>
-                            <p class="item-title"><a href="/2018/10/04/programming-spring-study-006/" class="title">스프링 DI(의존주입)-4</a></p>
-                            <p class="item-date"><time datetime="2018-10-04T14:01:23.000Z" itemprop="datePublished">2018-10-04</time></p>
                         </div>
                     </li>
                 
@@ -402,7 +412,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/">DBMS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/ORACLE/">ORACLE</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/JAVA/">JAVA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a><span class="category-list-count">9</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/WAS/">WAS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/WAS/JEUS/">JEUS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/기타/">기타</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/기타/DOCKER/">DOCKER</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/">DBMS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/DBMS/ORACLE/">ORACLE</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/JAVA/">JAVA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PROGRAMMING/SPRING/">SPRING</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/WAS/">WAS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/WAS/JEUS/">JEUS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/기타/">기타</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/기타/DOCKER/">DOCKER</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -412,7 +422,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">9</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">9</span></li></ul>
         </div>
     </div>
 
@@ -422,7 +432,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AOP/">AOP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DBMS/">DBMS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DI/">DI</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOCKER/">DOCKER</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DeginePattern/">DeginePattern</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOC/">IOC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/">JAVA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK-JRE-JVM/">JDK - JRE - JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JEUS/">JEUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LICENSE/">LICENSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAVEN/">MAVEN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ORACLE/">ORACLE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PROPERTY/">PROPERTY</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPRING/">SPRING</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServiceLocator/">ServiceLocator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TABLESPACE/">TABLESPACE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WAS/">WAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WEBTOB/">WEBTOB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/설치/">설치</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AOP/">AOP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DBMS/">DBMS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DI/">DI</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOCKER/">DOCKER</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DeginePattern/">DeginePattern</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOC/">IOC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/">JAVA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK-JRE-JVM/">JDK - JRE - JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JEUS/">JEUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LICENSE/">LICENSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAVEN/">MAVEN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ORACLE/">ORACLE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PROPERTY/">PROPERTY</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPRING/">SPRING</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServiceLocator/">ServiceLocator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TABLESPACE/">TABLESPACE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WAS/">WAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WEBTOB/">WEBTOB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/설치/">설치</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -432,7 +442,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/AOP/" style="font-size: 10px;">AOP</a> <a href="/tags/DBMS/" style="font-size: 10px;">DBMS</a> <a href="/tags/DI/" style="font-size: 16.67px;">DI</a> <a href="/tags/DOCKER/" style="font-size: 13.33px;">DOCKER</a> <a href="/tags/DeginePattern/" style="font-size: 10px;">DeginePattern</a> <a href="/tags/IOC/" style="font-size: 13.33px;">IOC</a> <a href="/tags/JAVA/" style="font-size: 13.33px;">JAVA</a> <a href="/tags/JDK-JRE-JVM/" style="font-size: 10px;">JDK - JRE - JVM</a> <a href="/tags/JEUS/" style="font-size: 10px;">JEUS</a> <a href="/tags/LICENSE/" style="font-size: 10px;">LICENSE</a> <a href="/tags/MAVEN/" style="font-size: 10px;">MAVEN</a> <a href="/tags/ORACLE/" style="font-size: 10px;">ORACLE</a> <a href="/tags/PROPERTY/" style="font-size: 10px;">PROPERTY</a> <a href="/tags/SPRING/" style="font-size: 20px;">SPRING</a> <a href="/tags/ServiceLocator/" style="font-size: 10px;">ServiceLocator</a> <a href="/tags/TABLESPACE/" style="font-size: 10px;">TABLESPACE</a> <a href="/tags/WAS/" style="font-size: 10px;">WAS</a> <a href="/tags/WEBTOB/" style="font-size: 10px;">WEBTOB</a> <a href="/tags/설치/" style="font-size: 10px;">설치</a>
+            <a href="/tags/AOP/" style="font-size: 12.5px;">AOP</a> <a href="/tags/DBMS/" style="font-size: 10px;">DBMS</a> <a href="/tags/DI/" style="font-size: 17.5px;">DI</a> <a href="/tags/DOCKER/" style="font-size: 15px;">DOCKER</a> <a href="/tags/DeginePattern/" style="font-size: 10px;">DeginePattern</a> <a href="/tags/IOC/" style="font-size: 12.5px;">IOC</a> <a href="/tags/JAVA/" style="font-size: 12.5px;">JAVA</a> <a href="/tags/JDK-JRE-JVM/" style="font-size: 10px;">JDK - JRE - JVM</a> <a href="/tags/JEUS/" style="font-size: 10px;">JEUS</a> <a href="/tags/LICENSE/" style="font-size: 10px;">LICENSE</a> <a href="/tags/MAVEN/" style="font-size: 10px;">MAVEN</a> <a href="/tags/ORACLE/" style="font-size: 10px;">ORACLE</a> <a href="/tags/PROPERTY/" style="font-size: 10px;">PROPERTY</a> <a href="/tags/SPRING/" style="font-size: 20px;">SPRING</a> <a href="/tags/ServiceLocator/" style="font-size: 10px;">ServiceLocator</a> <a href="/tags/TABLESPACE/" style="font-size: 10px;">TABLESPACE</a> <a href="/tags/WAS/" style="font-size: 10px;">WAS</a> <a href="/tags/WEBTOB/" style="font-size: 10px;">WEBTOB</a> <a href="/tags/설치/" style="font-size: 10px;">설치</a>
         </div>
     </div>
 
