@@ -12,18 +12,20 @@
     
         <meta name="keywords" content="SPRING,AOP" />
     
-    <meta name="description" content="AOP의 핵심 용어 정리">
+    <meta name="description" content="AOP의 핵심 용어 정리 Target(타겟) : 공통 기능이 부여될 대상을 의미합니다. 클래스 혹은 메소드가 될 수 있습니다. Aspect(애스팩트) : 여러 객체에 적용될 공통 기능을 의미합니다. ex) 보안, 로그, DB처리 Advice(어드바이스) : 공통 기능이 부여될 시점을 의미합니다. ex) 메소드 호출 전, 메소드 실행 이후 JoinPoint">
 <meta name="keywords" content="SPRING,AOP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AOP란 무엇일까? - 02">
 <meta property="og:url" content="https://lee-jung-hoon.github.io/2018/11/09/programming-spring-study-009/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="AOP의 핵심 용어 정리">
+<meta property="og:description" content="AOP의 핵심 용어 정리 Target(타겟) : 공통 기능이 부여될 대상을 의미합니다. 클래스 혹은 메소드가 될 수 있습니다. Aspect(애스팩트) : 여러 객체에 적용될 공통 기능을 의미합니다. ex) 보안, 로그, DB처리 Advice(어드바이스) : 공통 기능이 부여될 시점을 의미합니다. ex) 메소드 호출 전, 메소드 실행 이후 JoinPoint">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-10T00:08:43.874Z">
+<meta property="og:image" content="https://lee-jung-hoon.github.io/image/programming/spring/009/aop-001.jpg">
+<meta property="og:updated_time" content="2018-11-10T20:11:05.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AOP란 무엇일까? - 02">
-<meta name="twitter:description" content="AOP의 핵심 용어 정리">
+<meta name="twitter:description" content="AOP의 핵심 용어 정리 Target(타겟) : 공통 기능이 부여될 대상을 의미합니다. 클래스 혹은 메소드가 될 수 있습니다. Aspect(애스팩트) : 여러 객체에 적용될 공통 기능을 의미합니다. ex) 보안, 로그, DB처리 Advice(어드바이스) : 공통 기능이 부여될 시점을 의미합니다. ex) 메소드 호출 전, 메소드 실행 이후 JoinPoint">
+<meta name="twitter:image" content="https://lee-jung-hoon.github.io/image/programming/spring/009/aop-001.jpg">
     
 
     
@@ -177,14 +179,85 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="AOP의-핵심-용어-정리"><a href="#AOP의-핵심-용어-정리" class="headerlink" title="AOP의 핵심 용어 정리"></a>AOP의 핵심 용어 정리</h2>
+            <h1 id="AOP의-핵심-용어-정리"><a href="#AOP의-핵심-용어-정리" class="headerlink" title="AOP의 핵심 용어 정리"></a>AOP의 핵심 용어 정리</h1><ul>
+<li>Target(타겟) : 공통 기능이 부여될 대상을 의미합니다. 클래스 혹은 메소드가 될 수 있습니다.</li>
+<li>Aspect(애스팩트) : 여러 객체에 적용될 공통 기능을 의미합니다. ex) 보안, 로그, DB처리</li>
+<li>Advice(어드바이스) : 공통 기능이 부여될 시점을 의미합니다. ex) 메소드 호출 전, 메소드 실행 이후</li>
+<li>JoinPoint(조인포인트) : Advice가 적용 될 수 있는 지점을 의미하며 스프링의 경우 프록시 방식의 메소드 조인포인트를 지원합니다. 다른 AOP 방식의 경우 필드에도 적용이 가능하다.</li>
+<li>PointCut(포인트컷) : 여러 개의 조인 포인트를 모아 포인트컷이라 부릅니다.</li>
+</ul>
+<hr>
+<h1 id="AOP-Advice의-종류"><a href="#AOP-Advice의-종류" class="headerlink" title="AOP Advice의 종류"></a>AOP Advice의 종류</h1><ul>
+<li><code>&lt;aop:before&gt;</code> : 메소드가 실행되기 전에 실행</li>
+<li><code>&lt;aop:after-returning&gt;</code> : 메소드가 정상 실행 된 후 실행</li>
+<li><code>&lt;aop:after-throwing&gt;</code> : 메소드 실행 중 Exception 발생 시 실행</li>
+<li><code>&lt;aop:after&gt;</code> : 메소드 실행 중 Exception이 발생하여도 실행</li>
+<li><code>&lt;aop:around&gt;</code> : 메소드 실행 전 1회, 실행 후 1회 및 Exception 발생 시 실행</li>
+</ul>
+<ul>
+<li>스프링 AOP에서는 주로 <code>around advice</code>나 <code>before</code>를 사용한다.</li>
+</ul>
+<hr>
+<h1 id="스프링에-AOP-구현하기"><a href="#스프링에-AOP-구현하기" class="headerlink" title="스프링에 AOP 구현하기"></a>스프링에 AOP 구현하기</h1><p>앞서 살펴본 바와 같이 스프링은 프록시를 이용한 AOP를 제공한다.<br>이 방법에는 <strong>POJO 클래스를 이용한 XML 적용</strong>과 <strong>어노테이션(@Aspect)</strong>으로 두 가지가 있다.</p>
+<ul>
+<li>POJO(Plain Old Java Object) : 말 그대로 해석을 하면 오래된 방식의 간단한 자바 오브젝트라는 말로서 Java EE 등의 중량 프레임워크들을 사용하게 되면서 해당 프레임워크에 종속된 “무거운” 객체를 만들게 된 것에 반발해서 사용되게 된 용어이다. (출처 : <a href="https://ko.wikipedia.org/wiki/Plain_Old_Java_Object" target="_blank" rel="noopener">위키피디아</a>)</li>
+</ul>
+<h3 id="1-XML을-이용한-스프링-AOP"><a href="#1-XML을-이용한-스프링-AOP" class="headerlink" title="1. XML을 이용한 스프링 AOP"></a>1. XML을 이용한 스프링 AOP</h3><p>XML을 이용한 스프링 AOP를 사용할 경우, Aspect를 어디에 언제 적용할지를 설정한다.<br>이때 Aspect 클래스는 POJO(순수 자바 객체)이다.</p>
+<h4 id="적용을-위한-작업-순서"><a href="#적용을-위한-작업-순서" class="headerlink" title="적용을 위한 작업 순서"></a>적용을 위한 작업 순서</h4><ul>
+<li><p>Dependency 설정</p>
+<pre><code>pom.xml에 의존 라이브러리(aspectj) 추가
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>공통 코드(Proxy Code) 작성</p>
+<pre><code>Aspect 코드 구현
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">toLog</span><span class="params">(ProceedingJoinPoint joinpoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">   String methodName = joinpoint.getSignature().getName(); <span class="comment">// 메소드명 </span></span><br><span class="line">   <span class="keyword">long</span> startTime = System.nanoTime();	<span class="comment">// 시작시간 </span></span><br><span class="line">   <span class="keyword">try</span> &#123;</span><br><span class="line">      Object obj = joinpoint.proceed(); <span class="comment">// 핵심 기능 실행</span></span><br><span class="line">      <span class="keyword">return</span> obj;</span><br><span class="line">   &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">      <span class="keyword">long</span> endTime = System.nanoTime(); <span class="comment">// 종료시간 </span></span><br><span class="line">      System.out.println(<span class="string">"["</span> + methodName + <span class="string">"] is "</span> + (endTime - startTime));</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Aspect 코드 구현 시, 스프링 AOP에서 가장 많이 사용되는 Advice인 <strong>Around Advice</strong>로 구현할 경우 <code>ProceedingJoinPoint</code>의 proceed()를 통해 핵심 기능을 실행시킨다.</p>
+<p><img src="/image/programming/spring/009/aop-001.jpg" alt="Around Advice 생명주기"></p>
+<ul>
+<li>config.xml 설정<pre><code>AOP 설정 파일에 Aspect 빈 등록 및 PointCut 설정
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  공통 기능을 제공할 클래스를 빈에 등록처리 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"logAct"</span> <span class="attr">class</span>=<span class="string">"com.jhdev.asfect.LogAspect"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Aspect 설정: Advice를 어떤 Pointcut에 적용할 지 설정 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"logAct"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">pointcut</span>=<span class="string">"execution(* com.jhdev.board.service..*Impl.*(..))"</span> <span class="attr">method</span>=<span class="string">"toLog"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-어노테이션을-이용한-스프링-AOP"><a href="#2-어노테이션을-이용한-스프링-AOP" class="headerlink" title="2. 어노테이션을 이용한 스프링 AOP"></a>2. 어노테이션을 이용한 스프링 AOP</h3><p>어노테이션을 이용한 AOP 설정은 XML을 이용한 방법과 유사하지만 비교적 더 간단하다.<br>공통 기능 클래스에 어노테이션과 함께 PointCut을 설정한다.</p>
+<ul>
+<li>어노테이션을 이용하는 방법을 추천한다. 간결하고 생산성이 빠를 수 있다.</li>
+</ul>
+<h4 id="적용을-위한-작업-순서-1"><a href="#적용을-위한-작업-순서-1" class="headerlink" title="적용을 위한 작업 순서"></a>적용을 위한 작업 순서</h4><ul>
+<li><p>Dependency 설정</p>
+<pre><code>pom.xml에 의존 라이브러리(aspectj) 추가
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>공통 코드(Proxy Code) 작성</p>
+<pre><code>Aspect 코드 구현
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Aspect</span>	<span class="comment">// Aspect Anotation</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LogAspect</span> </span>&#123;</span><br><span class="line">   <span class="comment">// pointcut 설정 </span></span><br><span class="line">   <span class="meta">@Pointcut</span>(<span class="string">"within(com.jhdev.board.service.*)"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">pointcutMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// pointcut 메소드 설정 </span></span><br><span class="line">   <span class="meta">@Around</span>(<span class="string">"pointcutMethod()"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> Object <span class="title">toLog</span><span class="params">(ProceedingJoinPoint joinpoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">      String methodName = joinpoint.getSignature().getName(); <span class="comment">// 메소드명 </span></span><br><span class="line">      <span class="keyword">long</span> startTime = System.nanoTime();	<span class="comment">// 시작시간 </span></span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">         Object obj = joinpoint.proceed(); <span class="comment">// 핵심 기능 실행</span></span><br><span class="line">         <span class="keyword">return</span> obj;</span><br><span class="line">      &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">         <span class="keyword">long</span> endTime = System.nanoTime(); <span class="comment">// 종료시간 </span></span><br><span class="line">	     System.out.println(<span class="string">"["</span> + methodName + <span class="string">"] is "</span> + (endTime - startTime));</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// pointcut 직접 설정</span></span><br><span class="line">   <span class="meta">@Before</span>(<span class="string">"execution(public * com.jhdev.board.service..*(..))"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">beforeTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      System.out.println(<span class="string">"Before Advice"</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Aspect 코드 구현 시, XML POJO 방식과 대부분 동일하지만 다른 점은 pointcut과 advice 설정을 Aspect 구현 클래스에서 한다.</p>
+<ul>
+<li>config.xml 설정<pre><code>AOP를 xml에 설정하던 것과 다르게 빈과 autoproxy만을 설정
+</code></pre></li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  공통 기능을 제공할 클래스를 빈에 등록처리 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"logAct"</span> <span class="attr">class</span>=<span class="string">"com.jhdev.asfect.LogAspect"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- AutoProxy 설정--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="AspectJ의-PointCut-표현-방식"><a href="#AspectJ의-PointCut-표현-방식" class="headerlink" title="AspectJ의 PointCut 표현 방식"></a>AspectJ의 PointCut 표현 방식</h1><p>AspectJ 사용 시 PointCut을 명시하는 방법에 대해 알아보자<br>이를 <strong>AspectJ 문법</strong>이라고 부른다.<br>AOP는 다양한 핵심 기능에 공통 기능을 적용해야하기 때문에 AspectJ 문법으로 범위를 만들어야 한다.</p>
+<h4 id="기본-문법"><a href="#기본-문법" class="headerlink" title="기본 문법"></a>기본 문법</h4><p><code>*</code> : 모든 클래스 혹은 메소드<br><code>.</code> : 현재 패키지<br><code>..</code> : 0개 이상    </p>
+<h4 id="AspectJ-PointCut-명시자"><a href="#AspectJ-PointCut-명시자" class="headerlink" title="AspectJ PointCut 명시자"></a>AspectJ PointCut 명시자</h4><p><code>execution</code> : [접근명시자패턴] 리턴타입패턴 이름패턴(파라미터패턴) 형태로 세밀한 명시가 가능<br><code>within</code> : 특정 메소드가 아닌 특정 패키지 하위에 모든 메소드을 명시하는 경우</p>
+<h4 id="Execution"><a href="#Execution" class="headerlink" title="Execution"></a>Execution</h4><p>execution([접근명시자패턴] 리턴타입패턴 이름패턴(파라미터패턴))</p>
+<p><code>execution(publid void set*(..))</code><br>리턴 타입이 void이면서 메소드명이 set으로 시작하는 경우</p>
+<p><code>execution(* com.jhdev.board.service.*.*())</code><br>해당 패키지 내 클래스 중 파라미터가 없는 메소드</p>
+<p><code>execution(* com.jhdev.board.service..*.*())</code><br>해당 패키지와 해당 패키지 하위에 존재하는 패키지 내 파라미터가 없는 메소드</p>
+<h4 id="WithIn"><a href="#WithIn" class="headerlink" title="WithIn"></a>WithIn</h4><p><code>within(com.jhdev.board.service.*())</code><br>해당 패키지 내 모든 클래스의 메소드</p>
+<p><code>within(com.jhdev.board.service..*())</code><br>해당 패키지와 해당 패키지 하위에 존재하는 패키지 내 모든 클래스의 메소드</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://lee-jung-hoon.github.io/2018/11/09/programming-spring-study-009/" data-id="cjoazdcve000ycw3qxzhmq18s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://lee-jung-hoon.github.io/2018/11/09/programming-spring-study-009/" data-id="cjobvzasu0011of3q6hwi8sia" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
