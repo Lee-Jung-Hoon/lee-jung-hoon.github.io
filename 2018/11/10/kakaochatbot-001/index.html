@@ -6,21 +6,26 @@
     
 
     
-    <title>Category: JAVA | DevJH</title>
+    <title>30분 만에 간단한 카카오톡 챗봇(?) 만들기 - 1편 | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT Blog">
-<meta name="keywords" content="IT Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DevJH">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/categories/PROGRAMMING/JAVA/index.html">
+        <meta name="keywords" content="챗봇" />
+    
+    <meta name="description" content="앞으로 2편에 나눠 카카오톡 플러스 친구를 이용한 간단한 챗봇(?)을 만드려보려 합니다.사실 이정도 수준이 챗봇이라 부르긴 힘든게 사실입니다. 단순한 자동응답 카카오 계정을 만든다고 생각하시면 좋을 듯 합니다. 간단하지만 개발자가 아니라면 몇 가지 배경지식이 필요합니다. 필요한 것들 Node.js (서버의 역할을 하며 카카오톡, 각종 API와 연동을 담당합">
+<meta name="keywords" content="챗봇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="30분 만에 간단한 카카오톡 챗봇(?) 만들기 - 1편">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/2018/11/10/kakaochatbot-001/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="IT Blog">
+<meta property="og:description" content="앞으로 2편에 나눠 카카오톡 플러스 친구를 이용한 간단한 챗봇(?)을 만드려보려 합니다.사실 이정도 수준이 챗봇이라 부르긴 힘든게 사실입니다. 단순한 자동응답 카카오 계정을 만든다고 생각하시면 좋을 듯 합니다. 간단하지만 개발자가 아니라면 몇 가지 배경지식이 필요합니다. 필요한 것들 Node.js (서버의 역할을 하며 카카오톡, 각종 API와 연동을 담당합">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://lee-jung-hoon.github.io/image/chatbot/chatbot-001.png">
+<meta property="og:updated_time" content="2018-11-11T07:59:48.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DevJH">
-<meta name="twitter:description" content="IT Blog">
+<meta name="twitter:title" content="30분 만에 간단한 카카오톡 챗봇(?) 만들기 - 1편">
+<meta name="twitter:description" content="앞으로 2편에 나눠 카카오톡 플러스 친구를 이용한 간단한 챗봇(?)을 만드려보려 합니다.사실 이정도 수준이 챗봇이라 부르긴 힘든게 사실입니다. 단순한 자동응답 카카오 계정을 만든다고 생각하시면 좋을 듯 합니다. 간단하지만 개발자가 아니라면 몇 가지 배경지식이 필요합니다. 필요한 것들 Node.js (서버의 역할을 하며 카카오톡, 각종 API와 연동을 담당합">
+<meta name="twitter:image" content="https://lee-jung-hoon.github.io/image/chatbot/chatbot-001.png">
     
 
     
@@ -135,90 +140,137 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">JAVA</em>
+    <a class="page-title-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/PROGRAMMING/CHATBOT/">CHATBOT</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-kakaochatbot-001" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/JAVA/">JAVA</a>
-            </div>
-            <div class="date"><time datetime="2018-09-16T06:22:44.000Z" itemprop="datePublished">2018-09-16</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/09/16/programming-java-servicelocator-002/">서비스 로케이터란?</a>
+        30분 만에 간단한 카카오톡 챗봇(?) 만들기 - 1편
         </h1>
     
 
-        <p class="article-excerpt">
-            스프링을 공부하던 중 의존 해결을 위한 방법으로 서비스 로케이터와 DI가 있다고 배웠다.
-하지만 서비스 로케이터를 제대로 설명하는 경우는 별로 없는듯 하다.
-많은 부분에서 알지는 못하지만 이해한 곳까지는 적어보려 한다.
-서비스 로케이터(Service Locator)는 마틴 파울러에 의해 유명해진 디자인 패턴이다.
-JNDI를 생각하면 빠르게 이해할 수 있을 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
+            </header>
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/JAVA/">JAVA</a>
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/11/10/kakaochatbot-001/" class="article-date">
+            <time datetime="2018-11-10T07:36:46.000Z" itemprop="datePublished">2018-11-10</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/챗봇/">챗봇</a>
+    </div>
+
             </div>
-            <div class="date"><time datetime="2018-09-09T11:42:02.000Z" itemprop="datePublished">2018-09-09</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/09/09/programming-java-install-001/">JDK 설치 및 환경변수 설정</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>앞으로 2편에 나눠 카카오톡 플러스 친구를 이용한 간단한 챗봇(?)을 만드려보려 합니다.<br>사실 이정도 수준이 챗봇이라 부르긴 힘든게 사실입니다.</p>
+<p>단순한 자동응답 카카오 계정을 만든다고 생각하시면 좋을 듯 합니다.</p>
+<p>간단하지만 개발자가 아니라면 몇 가지 배경지식이 필요합니다.</p>
+<h4 id="필요한-것들"><a href="#필요한-것들" class="headerlink" title="필요한 것들"></a>필요한 것들</h4><ul>
+<li>Node.js (서버의 역할을 하며 카카오톡, 각종 API와 연동을 담당합니다.)</li>
+<li>javascript, jQuery</li>
+<li>카카오 계정(플랫폼을 카카오톡 플러스친구로 사용하므로)</li>
+</ul>
+<p>실제 서비스가 아닌 간단한 보여주기이므로 DB나 nginx와 같은 부분은 적용되지 않습니다.</p>
+<hr>
+<h2 id="1-카카오-API-등록"><a href="#1-카카오-API-등록" class="headerlink" title="1. 카카오 API 등록"></a>1. 카카오 API 등록</h2><p>먼저 <a href="https://center-pf.kakao.com" target="_blank" rel="noopener">카카오 플러스친구 관리센터</a>에 접속하여 플러스친구를 등록합니다.<br><img src="/image/chatbot/chatbot-001.png" alt="카카오 플러스친구 등록"><br>등록 내용은 개발과 크게 관련이 없으므로 마음대로 입력하셔도 됩니다.</p>
+<p><img src="/image/chatbot/chatbot-002.png" alt="카카오 플러스친구 API형"><br>모두 등록 하신 후 <code>스마트채팅</code> 메뉴로 이동하여 추가 개발을 통해 질문에 답변하는 <code>API형</code>을 선택합니다.</p>
 
-        <p class="article-excerpt">
-            1. JDK의 계층 구조
+        </div>
+        <footer class="article-footer">
+            
 
-JVM(JAVA Virtual Machine)  자바 가성 머신의 줄임말으로써 JAVA와 OS의 중개자 역할을 한다.  JVM이 있으므로 인해 자바는 OS에 구애받지 않는 ‘확장성’이라는 장점을 가지게 된다.  그 외에도 가비지 컬렉션(Garbage Collection), 메모리 관리등을 수행한다.
 
-JRE(JAVA Runtime
-        </p>
+
+    <a data-url="https://lee-jung-hoon.github.io/2018/11/10/kakaochatbot-001/" data-id="cjocqm0s0000zjc3qrrux4k8k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
 
@@ -256,6 +308,19 @@ JRE(JAVA Runtime
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/11/09/programming-spring-study-009/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">AOP란 무엇일까? - 02</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -405,11 +470,13 @@ JRE(JAVA Runtime
     var disqus_shortname = 'devjh';
     
     
+    var disqus_url = 'https://lee-jung-hoon.github.io/2018/11/10/kakaochatbot-001/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
