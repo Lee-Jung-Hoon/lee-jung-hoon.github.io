@@ -6,21 +6,24 @@
     
 
     
-    <title>Archive: 2019/3 | DevJH</title>
+    <title>스프링부트 테스트(SpringBoot Test) - @WebMvcTest | DevJH</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT Blog">
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="스프링부트는 Spring MVC의 컨트롤러 테스트를 위해 @WebMvcTest 어노테이션을 제공한다. WebMvcTest는 MockMvc를 구성하기 때문에 모의 MVC 형태로 HTTP 서버를 구성할 필요 없이 신속한 테스트를 가능케 한다. @SpringBootTest는 실제 어플리케이션과 동일하게 어플리케이션 컨텍스트를 로드하여 동작하므로 Bean의 개수가">
 <meta name="keywords" content="IT Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DevJH">
-<meta property="og:url" content="https://lee-jung-hoon.github.io/archives/2019/03/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="스프링부트 테스트(SpringBoot Test) - @WebMvcTest">
+<meta property="og:url" content="https://lee-jung-hoon.github.io/2019/04/28/programming-spring-study-007/index.html">
 <meta property="og:site_name" content="DevJH">
-<meta property="og:description" content="IT Blog">
+<meta property="og:description" content="스프링부트는 Spring MVC의 컨트롤러 테스트를 위해 @WebMvcTest 어노테이션을 제공한다. WebMvcTest는 MockMvc를 구성하기 때문에 모의 MVC 형태로 HTTP 서버를 구성할 필요 없이 신속한 테스트를 가능케 한다. @SpringBootTest는 실제 어플리케이션과 동일하게 어플리케이션 컨텍스트를 로드하여 동작하므로 Bean의 개수가">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-28T08:53:59.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DevJH">
-<meta name="twitter:description" content="IT Blog">
+<meta name="twitter:title" content="스프링부트 테스트(SpringBoot Test) - @WebMvcTest">
+<meta name="twitter:description" content="스프링부트는 Spring MVC의 컨트롤러 테스트를 위해 @WebMvcTest 어노테이션을 제공한다. WebMvcTest는 MockMvc를 구성하기 때문에 모의 MVC 형태로 HTTP 서버를 구성할 필요 없이 신속한 테스트를 가능케 한다. @SpringBootTest는 실제 어플리케이션과 동일하게 어플리케이션 컨텍스트를 로드하여 동작하므로 Bean의 개수가">
     
 
     
@@ -135,55 +138,148 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2019/3
+    <a class="page-title-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/PROGRAMMING/SPRING-BOOT/">SPRING BOOT</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-programming-spring-study-007" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/PROGRAMMING/">PROGRAMMING</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/PROGRAMMING/SPRING-BOOT/">SPRING BOOT</a>
-            </div>
-            <div class="date"><time datetime="2019-03-30T07:33:58.000Z" itemprop="datePublished">2019-03-30</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/03/30/programming-springboot-study-001/">스프링 부트(Spring Boot)란?</a>
+        스프링부트 테스트(SpringBoot Test) - @WebMvcTest
         </h1>
     
 
-        <p class="article-excerpt">
-            1. 스프링 부트는 무엇일까?자바 개발자라면 스프링 프레임워크에 대해서 한번은 들어봤거나 현재도 사용하고 있을 것이다.스프링은 경량, 안정성 그리고 DI, AOP 많은 장점을 바탕으로 국내 표준으로 통하는 프레임워크이다.
-이러한 장점이 있는 반면 환경 설정을 위한 많은 시간이 소비되는 단점이 존재했다.당장 프로젝트에 필요한 Dependency와 MVC 구조
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/04/28/programming-spring-study-007/" class="article-date">
+            <time datetime="2019-04-28T03:54:16.522Z" itemprop="datePublished">2019-04-28</time>
+        </a>
+    </div>
+
+		
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>스프링부트는 Spring MVC의 컨트롤러 테스트를 위해 <code>@WebMvcTest</code> 어노테이션을 제공한다. WebMvcTest는 <strong>MockMvc</strong>를 구성하기 때문에 모의 MVC 형태로 HTTP 서버를 구성할 필요 없이 신속한 테스트를 가능케 한다.</p>
+<p>@SpringBootTest는 실제 어플리케이션과 동일하게 어플리케이션 컨텍스트를 로드하여 동작하므로 Bean의 개수가 늘어나면 주입 속도가 느려져 테스트 자체의 의미가 희석될 수 있다. 하지만 @WebMvcTest의 경우 MVC와 관련된 <code>@Controller</code>, <code>@ControllerAdvice</code>, <code>@JsonComponent</code>, <code>Converter</code>, <code>GenericConverter</code>, <code>Filter</code>, <code>WebMvcConfigurer</code> 그리고 <code>HandlerMethodArgumentResolver</code>만 로드하기때문에 더 가벼운 테스트를 지원한다.(<code>@Component</code> 빈은 주입되지 않는다.)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@WebMvcTest</span>(BbsController.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BbsControllerTest</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> MockMvc mvc;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 가짜 Bean에 등록</span></span><br><span class="line">	<span class="meta">@MockBean</span></span><br><span class="line">	<span class="keyword">private</span> BbsService bbsService;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">selectReadTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		User user = <span class="keyword">new</span> User(<span class="number">1</span>, <span class="string">"leejh"</span>); </span><br><span class="line">		Bbs item = <span class="keyword">new</span> Bbs(<span class="string">"test bbs"</span>, user);</span><br><span class="line">		given(bbsService.readByBbs(<span class="number">1</span>)).willReturn(item); <span class="comment">// return 정의</span></span><br><span class="line">		mvc.perform(get(<span class="string">"/bbs/read"</span>).param(<span class="string">"id"</span>, <span class="string">"1"</span>))  <span class="comment">// getMethods</span></span><br><span class="line">		.andExpect(status().isOk()) <span class="comment">// HTTP STATUS 200 (sucess)</span></span><br><span class="line">		.andExpect(view().name(<span class="string">"usr.read"</span>)) <span class="comment">// view name check</span></span><br><span class="line">		.andExpect(model().attributeExists(<span class="string">"bbs"</span>))  <span class="comment">// property check</span></span><br><span class="line">		.andExpect(model().attribute(<span class="string">"bbs"</span>, Matchers.contains(item)));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@WebMvcTest 어노테이션에 테스트 대상 컨트롤러를 명시하므로써 모든 컨텍스트를 로드하는 @SpringBootTest에 비해 가벼운 테스트가 가능하다. </p>
+<blockquote>
+<p>스프링부트 레퍼런스에 의하면 @WebMvcTest만으로 테스트를 진행하는 것이 충분치 않을 경우가 있으므로 실제 서버와 완벽한 엔드-투-엔드 테스트를 위해선 @SpringBootTest를 사용하라고 말한다.</p>
+</blockquote>
+<hr>
+<p><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/web/servlet/ResultActions.html" target="_blank" rel="noopener">ResultActions</a></p>
+<ul>
+<li>andDo() : 요청 처리를 수행한다.<br>ex) mvc.perform(get(“/form”)).andDo(print());</li>
+<li>andExpect() : 예상 값을 검증한다<br>ex) mvc.perform(get(“/form”)).andExpect(matchAll(status().isOk(),redirectedUrl(“/person/1”)));</li>
+<li>andReturn() : 요청 결과를 반환(?)</li>
+</ul>
+<hr>
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/MockMvcResultMatchers.html" target="_blank" rel="noopener">ResultActionsMockMvcResultMatchers</a></p>
+<ul>
+<li>content() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/ContentResultMatchers.html" target="_blank" rel="noopener">response body 검증</a></li>
+<li>cookie() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/CookieResultMatchers.html" target="_blank" rel="noopener">cookie 검증</a></li>
+<li>flash() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/FlashAttributeResultMatchers.html" target="_blank" rel="noopener">flash 속성 검증</a></li>
+<li>forwardedUrl(String expectedUrl) : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/MockMvcResultMatchers.html#forwardedUrl-java.lang.String-" target="_blank" rel="noopener">포워드 검증</a></li>
+<li>header() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/HeaderResultMatchers.html" target="_blank" rel="noopener">response header 검증</a></li>
+<li>jsonPath(String expression, Matcher<t> matcher) : <a href="https://github.com/json-path/JsonPath" target="_blank" rel="noopener">jsonPath 검증</a></t></li>
+<li>model() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/ModelResultMatchers.html" target="_blank" rel="noopener">모델 검증</a></li>
+<li>redirectedUrl(String expectedUrl) : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/MockMvcResultMatchers.html#redirectedUrl-java.lang.String-" target="_blank" rel="noopener">리다이렉트 검증</a></li>
+<li>status() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/StatusResultMatchers.html" target="_blank" rel="noopener">상태 값 검증</a></li>
+<li>view() : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/ViewResultMatchers.html" target="_blank" rel="noopener">view name 검증</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://lee-jung-hoon.github.io/2019/04/28/programming-spring-study-007/" data-id="cjv0ejsal001l073qfjv60r1y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -221,6 +317,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/04/27/programming-springboot-study-006/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">스프링부트 테스트(SpringBoot Test) - 개요 및 @SpringBootTest</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -370,11 +479,13 @@
     var disqus_shortname = 'devjh';
     
     
+    var disqus_url = 'https://lee-jung-hoon.github.io/2019/04/28/programming-spring-study-007/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
